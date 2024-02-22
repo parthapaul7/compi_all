@@ -1,7 +1,4 @@
 
-
-Script to find testcases where your code is failing
-
 ## How to use(UBUNTU)
 
 This script requires 4 parameters.

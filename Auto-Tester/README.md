@@ -1,4 +1,3 @@
-This script requires 4 parameters.
 
 - `-g` : **Generator code** : Code which generates random testcases.
 

@@ -1,4 +1,3 @@
-- `-t`: **Number of test cases(optional)** : Enter how many testcases you want to genrate where your correct code and wrong code gives different results. It is equal to 1 by default.
 
 Please check the screenshot attached at the bottom for better clarity.
 

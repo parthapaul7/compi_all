@@ -1,6 +1,5 @@
 import os
 import sys
-
 run = {
 	"c": "gcc {0} && ./a.out < {1} > {2}",
 	"cpp": "g++ -std=c++11 {0} && ./a.out < {1} > {2}",

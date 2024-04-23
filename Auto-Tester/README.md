@@ -1,4 +1,3 @@
-
 - `-c`: **Correct code.** : Brute force code which will always give correct results but has bad complexity.
 
 - `-w`: **Wrong code** - Code with better complexity but is giving wrong answers.

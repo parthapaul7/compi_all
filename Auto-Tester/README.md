@@ -1,4 +1,3 @@
-- `-g` : **Generator code** : Code which generates random testcases.
 
 - `-c`: **Correct code.** : Brute force code which will always give correct results but has bad complexity.
 

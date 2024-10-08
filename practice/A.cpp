@@ -1,65 +1,34 @@
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
+void solve(){
+    int n=10;
+    vector<int> v(n);
 
-tuple<ll, ll, ll> countChars(const vector<string>& s, int p) {
-    ll z = 0, o = 0, q = 0;
-    for (const auto& x : s) {
-        if (x[p] == '0') z++;
-        else if (x[p] == '1') o++;
-        else q++;
-    }
-    return make_tuple(z, o, q);
-}
+    int p1=0,p2=1;
 
-void balance(ll& z, ll& o, ll& q) {
-    if (z > o) {
-        ll d = z - o;
-        o += min(d, q);
-        q -= min(d, q);
-    } else {
-        ll d = o - z;
-        z += min(d, q);
-        q -= min(d, q);
-    }
-}
+    int s=0,e=n;
 
-void distribute(ll& z, ll& o, ll& q) {
-    z += q / 2;
-    o += q / 2;
-    if (q & 1) {
-        if (o > z) z++;
-        else o++;
-    }
-}
+    while(e<n){
+        int seg = s + (s-e)/2;
 
-ll hammingSum(int n, int m, const vector<string>& s) {
-    ll h = 0;
-    for (int i = 0; i < n; ++i) {
-        ll z, o, q;
-        tie(z, o, q) = countChars(s, i);
-        balance(z, o, q);
-        distribute(z, o, q);
-        h += z * o;
-    }
-    return h;
-}
-
-void testCases() {
-    int t;
-    cin >> t;
-    while (t--) {
-        int n, m;
-        cin >> n >> m;
-        vector<string> s(m);
-        for (int i = 0; i < m; ++i) {
-            cin >> s[i];
+        // check if possible 
+        while(p1<n){
+            while(p2 < min(p2+seg,n)){
+                if(v[p2]<v[p1]){
+                    break;
+                }
+                p2++;
+            }
         }
-        cout << hammingSum(n, m, s) << endl;
-    }
-}
+        p1++;
+        p2+=seg;
 
-int main() {
-    testCases();
-    return 0;
+        
+    }
+    
+
+}
+int main(){
+int T;
+solve();
 }

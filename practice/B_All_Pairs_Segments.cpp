@@ -11,20 +11,29 @@ void solve(){
         cin>>query[i];
     }
 
-    vector<long long> mp(1000000,0);
+    unordered_map<int,pair<int,int>> mp;
     for(int i=0;i<n;i++){
-        mp[a[i]] = (long long)(n-i)*(i) + (n-i-1);
-        int temp = a[i];
-        while(i<n-1 && temp+1 != a[i+1]){
-            temp++;
-            mp[temp] = (long long)(n-i-1)*(i) + (n-i-1);
-        }
+        int num = (long long)(n-i)*(i) + (n-i-1);
+        
+        mp[num].first++;
+
     }
 
-    for(auto it:mp){
-        cout<<"-"<<it<<",";
+    for(int i=0;i<q;i++){
+        int b= n-2;
+        int c = query[i]+1-n;
+        int a = 1;
+
+        // find the integer solution ax^2-bx+c has integer solution
+        // find the solution
+        
+
+        
+    
     }
-    cout<<endl;
+
+    
+    
 }
 int main(){
 int T;
